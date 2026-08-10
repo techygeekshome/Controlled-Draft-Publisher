@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Controlled Draft Publisher
  * Description: Publishes draft posts on a configurable interval per post type, with a "Next Up" dashboard preview, a per-post auto-publish exclude option, optional publishing-window/weekend restrictions, email alerts, and logging.
- * Version: 1.7
+ * Version: 1.7.1
  * Requires at least: 5.0
  * Tested up to: 7.0.2
  * Requires PHP: 8.0
@@ -385,21 +385,21 @@ function cdp_register_menu() {
     // Shared "TGH" top-level menu — registered once no matter how many of our
     // plugins are active at the same time (first one to load wins the
     // registration; every plugin still adds its own submenu page below).
-    if ( ! defined( 'TGH_HUB_MENU_REGISTERED' ) ) {
-        define( 'TGH_HUB_MENU_REGISTERED', true );
+    if ( ! defined( 'TGHHUB_MENU_REGISTERED' ) ) {
+        define( 'TGHHUB_MENU_REGISTERED', true );
         add_menu_page(
             'TGH',
             'TGH',
             'manage_options',
-            'tgh-hub',
-            'tgh_hub_render_landing_page',
-            'data:image/svg+xml;base64,' . base64_encode( tgh_hub_menu_icon_svg() ),
-            3
+            'tghhub',
+            'tghhub_render_landing_page',
+            'data:image/svg+xml;base64,' . base64_encode( tghhub_menu_icon_svg() ),
+            null
         );
     }
 
     add_submenu_page(
-        'tgh-hub',
+        'tghhub',
         esc_html__( 'Draft Publisher', 'controlled-draft-publisher' ),
         esc_html__( 'Draft Publisher', 'controlled-draft-publisher' ),
         'manage_options',
@@ -407,7 +407,7 @@ function cdp_register_menu() {
         'cdp_dashboard_page'
     );
     add_submenu_page(
-        'tgh-hub',
+        'tghhub',
         esc_html__( 'Draft Publisher Settings', 'controlled-draft-publisher' ),
         esc_html__( 'DP Settings', 'controlled-draft-publisher' ),
         'manage_options',
@@ -423,15 +423,15 @@ function cdp_register_menu() {
    plugin/theme/software list changes).
    --------------------------- */
 
-if ( ! function_exists( 'tgh_hub_menu_icon_svg' ) ) {
-    function tgh_hub_menu_icon_svg() {
+if ( ! function_exists( 'tghhub_menu_icon_svg' ) ) {
+    function tghhub_menu_icon_svg() {
         return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="10,7 13.46,9 13.46,13 10,15 6.54,13 6.54,9" fill="none" stroke="black" stroke-width="1.6"/><line x1="10" y1="7" x2="10" y2="3" stroke="black" stroke-width="1.4"/><line x1="13.46" y1="13" x2="16.93" y2="15" stroke="black" stroke-width="1.4"/><line x1="6.54" y1="13" x2="3.07" y2="15" stroke="black" stroke-width="1.4"/><circle cx="10" cy="3" r="1.4" fill="black"/><circle cx="16.93" cy="15" r="1.4" fill="black"/><circle cx="3.07" cy="15" r="1.4" fill="black"/></svg>';
     }
 }
 
-if ( ! function_exists( 'tgh_hub_render_landing_page' ) ) {
-    function tgh_hub_render_landing_page() {
-        $plugins = apply_filters( 'tgh_hub_plugins', array(
+if ( ! function_exists( 'tghhub_render_landing_page' ) ) {
+    function tghhub_render_landing_page() {
+        $plugins = apply_filters( 'tghhub_plugins', array(
             array(
                 'name'        => 'Controlled Draft Publisher',
                 'description' => 'Hold posts as controlled drafts and publish them on your own schedule.',
@@ -462,7 +462,7 @@ if ( ! function_exists( 'tgh_hub_render_landing_page' ) ) {
             ),
         );
         ?>
-        <div class="wrap tgh-hub-dashboard">
+        <div class="wrap tghhub-dashboard">
             <h1>TechyGeeksHome</h1>
             <p>A shared home for everything we have built &mdash; our WordPress plugins, our theme, and our standalone software.</p>
 

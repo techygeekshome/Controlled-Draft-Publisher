@@ -5,7 +5,7 @@ Tags: drafts, scheduler, publish automation, content workflow, cron
 Requires at least: 5.0
 Tested up to: 7.0.2
 Requires PHP: 8.0
-Stable tag: 1.7
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,12 @@ The dashboard's "Next Up" panel lists the next few drafts in the order they'll a
 3. Settings: select post types, intervals, publishing window, and email alerts.
 
 == Changelog ==
+
+
+= 1.7.1 =
+* Fixed: the shared "Our Plugins" hub page functions/constants were renamed from the generic tgh_hub_ prefix to a unique tghhub_ prefix, avoiding a naming-collision risk raised by WordPress.org's Plugins Team during a companion plugin's (BackBurner Post Archiver) manual review.
+* Fixed: the shared hub's admin menu no longer registers at a hardcoded top-level position; it now uses WordPress core's default (safe) placement.
+
 = 1.7 =
 * Added a "Next Up" preview on the dashboard, showing exactly which drafts will publish next and in what order.
 * Added a per-post "Exclude this draft from auto-publish" option (matches the same exclusion pattern used in our BackBurner Post Archiver plugin).
