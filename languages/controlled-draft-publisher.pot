@@ -1,0 +1,249 @@
+# Copyright (C) 2025 TechyGeeksHome
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Controlled Draft Publisher 1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/controlled-draft-publisher\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-09-27T20:41:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: controlled-draft-publisher\n"
+
+#. Plugin Name of the plugin
+#: controlled-draft-publisher.php
+msgid "Controlled Draft Publisher"
+msgstr ""
+
+#. Description of the plugin
+#: controlled-draft-publisher.php
+msgid "Publishes one draft post every X minutes. Includes logging, stats, graphs, and admin dashboard with controls."
+msgstr ""
+
+#. Author of the plugin
+#: controlled-draft-publisher.php
+msgid "TechyGeeksHome"
+msgstr ""
+
+#. translators: %d is the number of minutes
+#: controlled-draft-publisher.php:136
+#, php-format
+msgid "Every %d Minutes"
+msgstr ""
+
+#: controlled-draft-publisher.php:190
+#: controlled-draft-publisher.php:191
+msgid "Draft Publisher"
+msgstr ""
+
+#: controlled-draft-publisher.php:198
+msgid "Settings"
+msgstr ""
+
+#: controlled-draft-publisher.php:216
+msgid "Publishing stopped."
+msgstr ""
+
+#: controlled-draft-publisher.php:224
+msgid "Publishing started."
+msgstr ""
+
+#: controlled-draft-publisher.php:232
+msgid "Manual publish triggered."
+msgstr ""
+
+#: controlled-draft-publisher.php:237
+msgid "Dashboard refreshed."
+msgstr ""
+
+#: controlled-draft-publisher.php:243
+msgid "Log cleared."
+msgstr ""
+
+#: controlled-draft-publisher.php:251
+msgid "No log entries to export."
+msgstr ""
+
+#: controlled-draft-publisher.php:309
+msgid "Draft Publisher Dashboard"
+msgstr ""
+
+#: controlled-draft-publisher.php:312
+msgid "Status:"
+msgstr ""
+
+#: controlled-draft-publisher.php:314
+msgid "Active"
+msgstr ""
+
+#: controlled-draft-publisher.php:315
+msgid "Inactive"
+msgstr ""
+
+#. translators: %d is the number of minutes
+#: controlled-draft-publisher.php:318
+msgid "Interval:"
+msgstr ""
+
+#. translators: %d is the number of minutes
+#: controlled-draft-publisher.php:318
+#, php-format
+msgid "Every %d minutes"
+msgstr ""
+
+#: controlled-draft-publisher.php:324
+msgid "Stop Publishing"
+msgstr ""
+
+#: controlled-draft-publisher.php:325
+msgid "Start Publishing"
+msgstr ""
+
+#: controlled-draft-publisher.php:332
+msgid "Refresh"
+msgstr ""
+
+#: controlled-draft-publisher.php:340
+msgid "Post Type:"
+msgstr ""
+
+#: controlled-draft-publisher.php:342
+msgid "All"
+msgstr ""
+
+#: controlled-draft-publisher.php:347
+msgid "Filter"
+msgstr ""
+
+#: controlled-draft-publisher.php:354
+msgid "Publish Now"
+msgstr ""
+
+#: controlled-draft-publisher.php:360
+msgid "Export Log (CSV)"
+msgstr ""
+
+#: controlled-draft-publisher.php:365
+msgid "Clear Log"
+msgstr ""
+
+#: controlled-draft-publisher.php:365
+msgid "Are you sure you want to clear the log?"
+msgstr ""
+
+#: controlled-draft-publisher.php:371
+msgid "Total Published:"
+msgstr ""
+
+#. translators: 1: post ID, 2: timestamp
+#: controlled-draft-publisher.php:375
+msgid "Last Published:"
+msgstr ""
+
+#. translators: 1: post ID, 2: timestamp
+#: controlled-draft-publisher.php:375
+#, php-format
+msgid "Post ID %1$d at %2$s"
+msgstr ""
+
+#: controlled-draft-publisher.php:378
+#: controlled-draft-publisher.php:379
+msgid "Next Scheduled Run:"
+msgstr ""
+
+#: controlled-draft-publisher.php:379
+msgid "Not scheduled"
+msgstr ""
+
+#: controlled-draft-publisher.php:381
+msgid "Activity Stats"
+msgstr ""
+
+#: controlled-draft-publisher.php:404
+#: controlled-draft-publisher.php:459
+msgid "Post Type"
+msgstr ""
+
+#: controlled-draft-publisher.php:404
+msgid "Count"
+msgstr ""
+
+#: controlled-draft-publisher.php:409
+msgid "No published items yet"
+msgstr ""
+
+#: controlled-draft-publisher.php:414
+msgid "Publishes (last 7 days)"
+msgstr ""
+
+#: controlled-draft-publisher.php:419
+msgid "Publish frequency last 7 days"
+msgstr ""
+
+#: controlled-draft-publisher.php:457
+msgid "Recent Activity"
+msgstr ""
+
+#: controlled-draft-publisher.php:459
+msgid "Post Title"
+msgstr ""
+
+#: controlled-draft-publisher.php:459
+msgid "URL"
+msgstr ""
+
+#: controlled-draft-publisher.php:459
+msgid "Date"
+msgstr ""
+
+#: controlled-draft-publisher.php:459
+msgid "Time"
+msgstr ""
+
+#: controlled-draft-publisher.php:459
+msgid "Post ID"
+msgstr ""
+
+#: controlled-draft-publisher.php:466
+msgid "(no title)"
+msgstr ""
+
+#: controlled-draft-publisher.php:473
+msgid "View"
+msgstr ""
+
+#: controlled-draft-publisher.php:488
+msgid "Pages:"
+msgstr ""
+
+#: controlled-draft-publisher.php:525
+msgid "Settings saved."
+msgstr ""
+
+#: controlled-draft-publisher.php:533
+msgid "Draft Publisher Settings"
+msgstr ""
+
+#: controlled-draft-publisher.php:536
+msgid "Interval (minutes)"
+msgstr ""
+
+#: controlled-draft-publisher.php:537
+msgid "Post Types"
+msgstr ""
+
+#: controlled-draft-publisher.php:543
+msgid "Enable Logging"
+msgstr ""
+
+#: controlled-draft-publisher.php:543
+msgid "Yes"
+msgstr ""
+
+#: controlled-draft-publisher.php:545
+msgid "Save Settings"
+msgstr ""
