@@ -10,6 +10,7 @@
 [![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-0078d4)](https://wordpress.org/plugins/controlled-draft-publisher/)
 [![License](https://img.shields.io/badge/license-proprietary%20freeware-b7791f)](LICENSE)
 [![Made by TechyGeeksHome](https://img.shields.io/badge/made%20by-TechyGeeksHome-b191f2)](https://techygeekshome.info)
+[![Support on Ko-fi](https://img.shields.io/badge/support-Ko--fi-ff5e5b)](https://ko-fi.com/techygeekshome)
 
 [Features](#-what-it-does) · [Screenshots](#-screenshots) · [Installation](#-installation) · [License](#-license)
 
