@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Controlled Draft Publisher
  * Description: Publishes draft posts on a configurable interval per post type, with a "Next Up" dashboard preview, a per-post auto-publish exclude option, optional publishing-window/weekend restrictions, email alerts, and logging.
- * Version: 1.7.1
+ * Version: 1.7.2
  * Requires at least: 5.0
  * Tested up to: 7.0.2
  * Requires PHP: 8.0
@@ -433,38 +433,67 @@ if ( ! function_exists( 'tghhub_render_landing_page' ) ) {
     function tghhub_render_landing_page() {
         $plugins = apply_filters( 'tghhub_plugins', array(
             array(
-                'name'        => 'Controlled Draft Publisher',
-                'description' => 'Hold posts as controlled drafts and publish them on your own schedule.',
+                'name'        => __( 'BackBurner Post Archiver', 'controlled-draft-publisher' ),
+                'description' => __( 'Moves old posts out of active circulation without deleting them or breaking a URL.', 'controlled-draft-publisher' ),
+                'url'         => 'https://wordpress.org/plugins/backburner-post-archiver/',
+            ),
+            array(
+                'name'        => __( 'Controlled Draft Publisher', 'controlled-draft-publisher' ),
+                'description' => __( 'Hold posts as controlled drafts and publish them on your own schedule.', 'controlled-draft-publisher' ),
                 'url'         => 'https://wordpress.org/plugins/controlled-draft-publisher/',
             ),
             array(
-                'name'        => 'LinkGather',
-                'description' => 'Collects and manages links across your site.',
+                'name'        => __( 'LinkGather', 'controlled-draft-publisher' ),
+                'description' => __( 'Collects and manages links across your site.', 'controlled-draft-publisher' ),
                 'url'         => 'https://wordpress.org/plugins/linkgather/',
             ),
         ) );
 
         $themes = array(
             array(
-                'name'        => 'NeoDark Free',
-                'description' => 'A fast, dark-mode WordPress theme for tech blogs, tutorials, and reviews.',
+                'name'        => __( 'NeoDark Free', 'controlled-draft-publisher' ),
+                'description' => __( 'A fast, dark-mode WordPress theme for tech blogs, tutorials and reviews.', 'controlled-draft-publisher' ),
                 'url'         => 'https://techygeekshome.info/neodark-free/',
-                'cta'         => 'View Theme',
+                'cta'         => __( 'View Theme', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'NeoDark Pro', 'controlled-draft-publisher' ),
+                'description' => __( 'Hero slider, three-column layout, review blocks and a mega menu. One-time payment.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/neodark-pro/',
+                'cta'         => __( 'View Theme', 'controlled-draft-publisher' ),
             ),
         );
 
         $software = array(
             array(
-                'name'        => 'DiskGeek',
-                'description' => 'Free disk space analyser for Windows: scan, find duplicates, and reclaim space.',
-                'url'         => 'https://techygeekshome.info/introducing-diskgeek-a-free-disk-space-analyser-for-windows/',
-                'cta'         => 'View / Download',
+                'name'        => __( 'AppGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Update every application on a Windows PC in one go, using winget.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/appgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'PDFGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Merge, split, compress and convert PDFs entirely offline.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/pdfgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'DiskGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Free disk space analyser for Windows: scan, find duplicates and reclaim space.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/diskgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'Ultimate Settings Panel', 'controlled-draft-publisher' ),
+                'description' => __( '250+ Windows settings, tools and commands in one fast, searchable panel.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/ultimate-settings-panel-online/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
             ),
         );
         ?>
         <div class="wrap tghhub-dashboard">
             <h1>TechyGeeksHome</h1>
-            <p>A shared home for everything we have built &mdash; our WordPress plugins, our theme, and our standalone software.</p>
+            <p>A shared home for everything we have built &mdash; our WordPress plugins, our themes, and our standalone software.</p>
 
             <h2>Our Plugins</h2>
             <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;">
