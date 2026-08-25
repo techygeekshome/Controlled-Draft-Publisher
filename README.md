@@ -6,7 +6,7 @@
 
 **Publish your WordPress draft queue automatically, on a schedule you control — not all at once.**
 
-[![Version](https://img.shields.io/badge/version-1.7.1-4c9bff)](https://wordpress.org/plugins/controlled-draft-publisher/)
+[![Version](https://img.shields.io/wordpress/plugin/v/controlled-draft-publisher?label=version&color=4c9bff)](https://wordpress.org/plugins/controlled-draft-publisher/)
 [![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-0078d4)](https://wordpress.org/plugins/controlled-draft-publisher/)
 [![License](https://img.shields.io/badge/license-proprietary%20freeware-b7791f)](LICENSE)
 [![Made by TechyGeeksHome](https://img.shields.io/badge/made%20by-TechyGeeksHome-b191f2)](https://techygeekshome.info)
