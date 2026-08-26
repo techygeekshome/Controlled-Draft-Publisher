@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://ps.w.org/controlled-draft-publisher/assets/icon-256x256.png" alt="Controlled Draft Publisher logo" width="96" height="96">
+<img src="https://raw.githubusercontent.com/techygeekshome/Controlled-Draft-Publisher/main/assets/icon-256x256.png" alt="Controlled Draft Publisher logo" width="96" height="96">
 
 # Controlled Draft Publisher
 
 **Publish your WordPress draft queue automatically, on a schedule you control — not all at once.**
 
-[![Version](https://img.shields.io/wordpress/plugin/v/controlled-draft-publisher?label=version&color=4c9bff)](https://wordpress.org/plugins/controlled-draft-publisher/)
+[![Version](https://img.shields.io/github/v/release/techygeekshome/Controlled-Draft-Publisher?label=version&color=4c9bff)](https://github.com/techygeekshome/Controlled-Draft-Publisher/releases)
 [![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-0078d4)](https://wordpress.org/plugins/controlled-draft-publisher/)
 [![License](https://img.shields.io/badge/license-proprietary%20freeware-b7791f)](LICENSE)
 [![Made by TechyGeeksHome](https://img.shields.io/badge/made%20by-TechyGeeksHome-b191f2)](https://techygeekshome.info)
@@ -25,9 +25,9 @@ Free, on WordPress.org, no bloat.
 ## 📸 Screenshots
 
 <p float="left">
-<img src="https://ps.w.org/controlled-draft-publisher/assets/screenshot-1.png" width="32%" />
-<img src="https://ps.w.org/controlled-draft-publisher/assets/screenshot-2.png" width="32%" />
-<img src="https://ps.w.org/controlled-draft-publisher/assets/screenshot-3.png" width="32%" />
+<img src="https://raw.githubusercontent.com/techygeekshome/Controlled-Draft-Publisher/main/assets/screenshot-1.png" width="32%" />
+<img src="https://raw.githubusercontent.com/techygeekshome/Controlled-Draft-Publisher/main/assets/screenshot-2.png" width="32%" />
+<img src="https://raw.githubusercontent.com/techygeekshome/Controlled-Draft-Publisher/main/assets/screenshot-3.png" width="32%" />
 </p>
 
 ## ⬇️ Installation
