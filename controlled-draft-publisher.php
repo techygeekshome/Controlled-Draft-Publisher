@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Controlled Draft Publisher
  * Description: Publishes draft posts on a configurable interval per post type, with a "Next Up" dashboard preview, a per-post auto-publish exclude option, optional publishing-window/weekend restrictions, email alerts, and logging.
- * Version: 1.7.3
+ * Version: 1.7.4
  * Requires at least: 5.0
  * Tested up to: 7.0.2
  * Requires PHP: 8.0
@@ -382,7 +382,7 @@ function cdp_send_notification_email( $published, $errors ) {
 add_action( 'admin_menu', 'cdp_register_menu' );
 
 function cdp_register_menu() {
-    // Shared "TGH" top-level menu — registered once no matter how many of our
+    // Shared "TGH" top-level menu - registered once no matter how many of our
     // plugins are active at the same time (first one to load wins the
     // registration; every plugin still adds its own submenu page below).
     if ( ! defined( 'TGHHUB_MENU_REGISTERED' ) ) {
@@ -419,7 +419,7 @@ function cdp_register_menu() {
 /* ---------------------------
    Shared "TGH" hub landing page (identical copy lives in every TGH plugin;
    function_exists() guards mean whichever plugin loads first "wins" and
-   renders it — keep this block in sync across all TGH plugins when the
+   renders it - keep this block in sync across all TGH plugins when the
    plugin/theme/software list changes).
    --------------------------- */
 
@@ -511,6 +511,24 @@ if ( ! function_exists( 'tghhub_render_landing_page' ) ) {
                 'name'        => __( 'TranscribeGeek', 'controlled-draft-publisher' ),
                 'description' => __( 'Turn recordings into text on your own machine, as a transcript or a subtitle file.', 'controlled-draft-publisher' ),
                 'url'         => 'https://techygeekshome.info/transcribegeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'AuthGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Keep your two-factor codes in one encrypted file on your own PC. No account, no sync.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/authgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'ShortGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Turn a guide, a feed or an idea into a narrated, captioned vertical short.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/shortgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'SoundGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Clean up a recording: background noise, mains hum and levels, on your own machine.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/soundgeek/',
                 'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
             ),
             array(
@@ -761,7 +779,7 @@ function cdp_dashboard_page() {
 
     echo '<hr>';
 
-    // "Next Up" preview — shows what will actually publish next, in order,
+    // "Next Up" preview - shows what will actually publish next, in order,
     // using the exact same query the real run uses, so it's never misleading.
     echo '<h2>' . esc_html__( 'Next Up', 'controlled-draft-publisher' ) . '</h2>';
     $next_up = cdp_get_next_up( 5 );

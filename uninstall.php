@@ -1,5 +1,5 @@
 <?php
-// Controlled Draft Publisher — uninstall cleanup
+// Controlled Draft Publisher - uninstall cleanup
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
     exit;
 }
