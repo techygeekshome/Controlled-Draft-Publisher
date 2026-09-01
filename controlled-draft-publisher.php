@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Controlled Draft Publisher
  * Description: Publishes draft posts on a configurable interval per post type, with a "Next Up" dashboard preview, a per-post auto-publish exclude option, optional publishing-window/weekend restrictions, email alerts, and logging.
- * Version: 1.7.2
+ * Version: 1.7.3
  * Requires at least: 5.0
  * Tested up to: 7.0.2
  * Requires PHP: 8.0
@@ -466,21 +466,51 @@ if ( ! function_exists( 'tghhub_render_landing_page' ) ) {
 
         $software = array(
             array(
+                'name'        => __( 'PDFGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Merge, split, extract, rotate, watermark and password-protect PDFs, entirely offline.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/pdfgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
                 'name'        => __( 'AppGeek', 'controlled-draft-publisher' ),
                 'description' => __( 'Update every application on a Windows PC in one go, using winget.', 'controlled-draft-publisher' ),
                 'url'         => 'https://techygeekshome.info/appgeek/',
                 'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
             ),
             array(
-                'name'        => __( 'PDFGeek', 'controlled-draft-publisher' ),
-                'description' => __( 'Merge, split, compress and convert PDFs entirely offline.', 'controlled-draft-publisher' ),
-                'url'         => 'https://techygeekshome.info/pdfgeek/',
+                'name'        => __( 'CleanGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Clear out temporary files, caches and leftovers, and see what was actually removed.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/cleangeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'CutGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Take the background out of a photograph at full size, on your own machine.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/cutgeek/',
                 'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
             ),
             array(
                 'name'        => __( 'DiskGeek', 'controlled-draft-publisher' ),
-                'description' => __( 'Free disk space analyser for Windows: scan, find duplicates and reclaim space.', 'controlled-draft-publisher' ),
+                'description' => __( 'Free disk space analyser: see what is filling a drive, find the biggest files and duplicates.', 'controlled-draft-publisher' ),
                 'url'         => 'https://techygeekshome.info/diskgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'DriverGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Find out which drivers are out of date, and get them from the manufacturer, not a bundle.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/drivergeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'ReelGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Turn a folder of photographs into a vertical edit cut to a beat grid.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/reelgeek/',
+                'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
+            ),
+            array(
+                'name'        => __( 'TranscribeGeek', 'controlled-draft-publisher' ),
+                'description' => __( 'Turn recordings into text on your own machine, as a transcript or a subtitle file.', 'controlled-draft-publisher' ),
+                'url'         => 'https://techygeekshome.info/transcribegeek/',
                 'cta'         => __( 'View / Download', 'controlled-draft-publisher' ),
             ),
             array(
@@ -493,7 +523,7 @@ if ( ! function_exists( 'tghhub_render_landing_page' ) ) {
         ?>
         <div class="wrap tghhub-dashboard">
             <h1>TechyGeeksHome</h1>
-            <p>A shared home for everything we have built &mdash; our WordPress plugins, our themes, and our standalone software.</p>
+            <p>A shared home for everything we have built: our WordPress plugins, our themes, and our standalone software.</p>
 
             <h2>Our Plugins</h2>
             <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;">
@@ -518,6 +548,7 @@ if ( ! function_exists( 'tghhub_render_landing_page' ) ) {
             </div>
 
             <h2 style="margin-top:32px;">Our Software</h2>
+            <p>All free, all offline, all for Windows. <a href="https://techygeekshome.info/geek-tools/" target="_blank" rel="noopener">See the whole range</a>.</p>
             <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;">
                 <?php foreach ( $software as $s ) : ?>
                     <div style="border:1px solid #dcdcde;border-radius:6px;padding:16px;width:280px;background:#fff;">
@@ -711,7 +742,7 @@ function cdp_dashboard_page() {
     echo '<p><strong>' . esc_html__( 'Selected Categories:', 'controlled-draft-publisher' ) . '</strong> ' . esc_html( implode( ', ', $category_names ) ?: 'None' ) . '</p>';
     echo '<p><strong>' . esc_html__( 'Publishing Window:', 'controlled-draft-publisher' ) . '</strong> ' . ( $window_enabled
         ? esc_html( get_option( 'cdp_window_start', '09:00' ) . ' - ' . get_option( 'cdp_window_end', '18:00' ) ) . ( get_option( 'cdp_skip_weekends', false ) ? ' (' . esc_html__( 'weekdays only', 'controlled-draft-publisher' ) . ')' : '' )
-        : esc_html__( 'Disabled — publishes any time', 'controlled-draft-publisher' ) ) . '</p>';
+        : esc_html__( 'Disabled, publishes any time', 'controlled-draft-publisher' ) ) . '</p>';
 
     // Start/Stop form
     echo '<form method="post" style="display:inline-block;margin-right:1em;">';
@@ -735,7 +766,7 @@ function cdp_dashboard_page() {
     echo '<h2>' . esc_html__( 'Next Up', 'controlled-draft-publisher' ) . '</h2>';
     $next_up = cdp_get_next_up( 5 );
     if ( empty( $next_up ) ) {
-        echo '<p>' . esc_html__( 'Nothing queued — no matching drafts right now.', 'controlled-draft-publisher' ) . '</p>';
+        echo '<p>' . esc_html__( 'Nothing queued. No matching drafts right now.', 'controlled-draft-publisher' ) . '</p>';
     } else {
         echo '<table class="widefat" style="max-width:640px;"><thead><tr><th>' . esc_html__( 'Title', 'controlled-draft-publisher' ) . '</th><th>' . esc_html__( 'Post Type', 'controlled-draft-publisher' ) . '</th><th>' . esc_html__( 'Draft Date', 'controlled-draft-publisher' ) . '</th></tr></thead><tbody>';
         foreach ( $next_up as $item ) {
