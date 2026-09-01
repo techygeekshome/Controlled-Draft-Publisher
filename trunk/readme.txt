@@ -5,7 +5,7 @@ Tags: drafts, scheduler, publish automation, content workflow, cron
 Requires at least: 5.0
 Tested up to: 7.0.2
 Requires PHP: 8.0
-Stable tag: 1.7.3
+Stable tag: 1.7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,7 +54,7 @@ The plugin uses WordPress cron (WP-Cron) to schedule publishes. For low-traffic 
 Yes, use the "Publish Now" button on the dashboard to publish a draft immediately.
 
 = Can I stop one specific draft from being auto-published, without changing my settings? =
-Yes. Open the draft in the editor and tick "Exclude this draft from auto-publish" in the Draft Publisher box in the sidebar. It's skipped until you untick it or publish it yourself — your interval and post type settings are unaffected.
+Yes. Open the draft in the editor and tick "Exclude this draft from auto-publish" in the Draft Publisher box in the sidebar. It's skipped until you untick it or publish it yourself - your interval and post type settings are unaffected.
 
 = How do I see what's going to publish next? =
 The dashboard's "Next Up" panel lists the next few drafts in the order they'll actually go out, using your current post type/category settings.
@@ -65,6 +65,9 @@ The dashboard's "Next Up" panel lists the next few drafts in the order they'll a
 3. Settings: select post types, intervals, publishing window, and email alerts.
 
 == Changelog ==
+
+= 1.7.4 =
+* Added AuthGeek, ShortGeek and SoundGeek to the TechyGeeksHome panel on the plugin's settings screen.
 
 = 1.7.3 =
 * The TechyGeeksHome panel now lists the whole current range of applications rather than four of them, and links to the full list.
@@ -123,7 +126,7 @@ The dashboard's "Next Up" panel lists the next few drafts in the order they'll a
 Adds a "Next Up" dashboard preview and a per-post auto-publish exclusion option. Tested with WordPress 7.0.2. No settings changes needed.
 
 = 1.6 =
-Settings pages have moved under a shared "TGH" admin menu. Your saved settings and scheduled jobs are unaffected — only the menu location changed.
+Settings pages have moved under a shared "TGH" admin menu. Your saved settings and scheduled jobs are unaffected - only the menu location changed.
 
 = 1.5 =
 Adds per-post-type intervals, publishing windows, email alerts, and uninstall cleanup. Recommended for all users.
