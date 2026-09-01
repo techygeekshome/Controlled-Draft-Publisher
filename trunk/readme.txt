@@ -5,7 +5,7 @@ Tags: drafts, scheduler, publish automation, content workflow, cron
 Requires at least: 5.0
 Tested up to: 7.0.2
 Requires PHP: 8.0
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,10 @@ The dashboard's "Next Up" panel lists the next few drafts in the order they'll a
 3. Settings: select post types, intervals, publishing window, and email alerts.
 
 == Changelog ==
+
+= 1.7.3 =
+* The TechyGeeksHome panel now lists the whole current range of applications rather than four of them, and links to the full list.
+* Tidied a few pieces of wording in the admin screens.
 
 = 1.7.2 =
 * The TechyGeeksHome hub page now lists everything: BackBurner Post Archiver (newly live on WordPress.org), AppGeek, PDFGeek, Ultimate Settings Panel and NeoDark Pro were all missing. The DiskGeek link pointed at an old announcement post rather than its product page.
