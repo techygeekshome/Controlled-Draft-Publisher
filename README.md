@@ -61,7 +61,7 @@ Found a bug or have a feature request? Use the [WordPress.org support forum](htt
 
 Controlled Draft Publisher is free to download and use. This repository is proprietary freeware, not an open-source project — see [LICENSE](LICENSE) for the full terms. (The copy distributed via the official WordPress Plugin Directory is licensed GPLv2-or-later, as required by wordpress.org — see the note in [LICENSE](LICENSE).)
 
-© 2026 TechyGeeksHome | Andrew Armstrong.
+© 2026 TechyGeeksHome.
 
 ---
 
